@@ -5,11 +5,11 @@
 // "http://localhost:8888/comem-archidep-php-todo-exercise/", then BASE_URL
 // should be "/comem-archidep-php-todo-exercise/". If you are accessing the
 // application at "http://localhost:8888", then BASE_URL should be "/".
-define('BASE_URL', '/');
+define('BASE_URL', '/archiDepNote/comem-archidep-php-todo-exercise');
 
 // Database connection parameters.
 define('DB_USER', 'todolist');
-define('DB_PASS', 'change-me-now');
+define('DB_PASS', 'admin');
 define('DB_NAME', 'todolist');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');

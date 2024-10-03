@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS todolist;
 -- The "WITH mysql_native_password" portion of this query is required for some
 -- older versions of MySQL. If you get a "syntax error [...] near BY" message,
 -- simply remove that part and use only "IDENTIFIED BY".
-CREATE USER IF NOT EXISTS 'todolist'@'localhost' IDENTIFIED WITH mysql_native_password BY 'change-me-now';
+CREATE USER IF NOT EXISTS 'todolist'@'localhost' IDENTIFIED WITH mysql_native_password BY 'admin';
 
 GRANT ALL PRIVILEGES ON todolist.* TO 'todolist'@'localhost';
 
