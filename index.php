@@ -25,7 +25,7 @@ if (isset($_POST['action'])) {
      */
     case 'new':
 
-      $title = $_POST['title'];
+      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING); //Ajout du filtre
       if ($title && $title !== '') {
         $insertQuery = 'INSERT INTO todo VALUES(NULL, \''.$title.'\', FALSE, CURRENT_TIMESTAMP)';
         if (!$db->query($insertQuery)) {
