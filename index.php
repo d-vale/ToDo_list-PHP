@@ -24,7 +24,6 @@ if (isset($_POST['action'])) {
      * Insert a new task into the database, then redirect to the base URL.
      */
     case 'new':
-
       $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING); //Ajout du filtre
       if ($title && $title !== '') {
         $insertQuery = 'INSERT INTO todo VALUES(NULL, \''.$title.'\', FALSE, CURRENT_TIMESTAMP)';
