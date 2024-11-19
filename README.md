@@ -1,9 +1,4 @@
 # Todo list PHP
-
-
-
-
-
 ## :gem: The application
 
 This repository contains a partially implemented todo list written in PHP, HTML
