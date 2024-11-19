@@ -24,7 +24,7 @@ if (isset($_POST['action'])) {
      * Insert a new task into the database, then redirect to the base URL.
      */
     case 'new':
-      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING); //Ajout du filtre
+      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
       if ($title && $title !== '') {
         $insertQuery = 'INSERT INTO todo VALUES(NULL, \''.$title.'\', FALSE, CURRENT_TIMESTAMP)';
         if (!$db->query($insertQuery)) {
@@ -43,7 +43,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $updateQuery = 'UPDATE todo SET done = NOT done WHERE id = ' . $id; // IMPLEMENT ME - done
+        $updateQuery = 'UPDATE todo SET done = NOT done WHERE id = ' . $id;
         if(!$db->query($updateQuery)) {
           die(print_r($db->errorInfo(), true));
         }
@@ -59,7 +59,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $deleteQuery = 'DELETE FROM todo WHERE id = ' . $id; // IMPLEMENT ME - done
+        $deleteQuery = 'DELETE FROM todo WHERE id = ' . $id;
         if(!$db->query($deleteQuery)) {
           die(print_r($db->errorInfo(), true));
         }
